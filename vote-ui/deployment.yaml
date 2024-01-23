@@ -17,7 +17,7 @@ spec:
       containers:
         - image: quay.io/pkjoon/ui:80a213d
           imagePullPolicy: Always
-          name: vote-ui:d3e1ac3
+          name: vote-ui
           ports:
             - containerPort: 8080
               protocol: TCP
