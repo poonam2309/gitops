@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: vote-ui
-  name: vote-ui
+    app: vote-ui:sha256:bd78d98d390ab8840c16534d9218804366154286f7432f5d23ace81f1acb757c
+  name: vote-ui:sha256:bd78d98d390ab8840c16534d9218804366154286f7432f5d23ace81f1acb757c
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: vote-ui
+      app: vote-ui:sha256:bd78d98d390ab8840c16534d9218804366154286f7432f5d23ace81f1acb757c
   template:
     metadata:
       labels:
-        app: vote-ui
+        app: vote-ui:sha256:bd78d98d390ab8840c16534d9218804366154286f7432f5d23ace81f1acb757c
     spec:
       containers:
-        - image: quay.io/pkjoon/ui:0998929
+        - image: quay.io/pkjoon/ui:sha256:bd78d98d390ab8840c16534d9218804366154286f7432f5d23ace81f1acb757c
           imagePullPolicy: Always
-          name: vote-ui
+          name: vote-ui:sha256:bd78d98d390ab8840c16534d9218804366154286f7432f5d23ace81f1acb757c
           ports:
             - containerPort: 8080
               protocol: TCP
