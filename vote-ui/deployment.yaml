@@ -15,7 +15,7 @@ spec:
         app: vote-ui:d3e1ac3
     spec:
       containers:
-        - image: quay.io/pkjoon/ui:80a213d
+        - image: quay.io/pkjoon/ui:133abf6
           imagePullPolicy: Always
           name: vote-ui
           ports:
